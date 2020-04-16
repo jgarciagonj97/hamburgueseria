@@ -1,0 +1,405 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+
+/* 
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Handlee', cursive;
+    color primario: #fa573a;
+    color secundario: #21242e;
+    --breakpoint-movil: 26.563em;
+    --breakpoint-tablet:48em;
+    --breakpoint-desktop:62.750em;
+*/
+
+/*Sitio para crear variables que es comun para todos (el root)*/
+:root{
+    --color-principal: #fa573a;
+    --color-secundario: #21242e;
+    --ancho-maximo:1100px;
+    --fuentePrincipal: 'Montserrat', sans-serif;
+    --fuenteSecundaria: 'Handlee', cursive;
+}
+
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fuentePrincipal);
+    font-size: 1em; /* 16px */
+}
+
+/* Esto siempre y muy importante para no tener problema con tamaños de imagenes*/
+img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container{
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+
+/* ------HEADER------ */
+header .nav_top{
+    background-color: var(--color-secundario);
+    padding: 20px 0;
+}
+
+.row{
+    display: flex;
+}
+
+header .nav_top a{
+    text-decoration: none;
+    color: white;
+    font-size: 120%;
+}
+
+header .nav_top a span{
+    display: none;
+}
+
+header .nav_top .row{
+    justify-content: space-between;
+}
+
+/*
+Igual que lo de arriba; dejar los iconos separados entre si
+header .nav_top .row div{
+    width:100%;
+    text-align: center;
+}
+*/
+
+header .nav_top .row div{
+    padding:0 10px
+}
+
+header .nav_top i{
+    color: var(--color-principal);
+}
+
+header nav{
+    padding: 20px 20px;
+}
+
+header .logo{
+    width:50%;
+}
+
+header .logo img{
+    /*Puedo poner ancho al img porque le he puesto display:block*/
+    max-width: 110px;
+}
+
+header .hamburguesa{
+    cursor: pointer;
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+header .hamburguesa div{
+    border-top: 2px solid #aaa;
+    margin: 0.30em;
+    width: 1.875em;
+}
+
+header nav .row{
+    flex-wrap: wrap;
+}
+
+header nav ul{
+    width: 100%;
+}
+
+header nav ul li a{
+    display: block;
+    padding: 1.200em;
+    color: #aaa;
+    text-align: center;
+    text-decoration: none;
+    border-bottom: 1.2px solid #aaa;
+}
+
+header nav ul li a:hover{
+    color: var(--color-principal);
+}
+
+header nav ul li .activo{
+    color: var(--color-principal);
+}
+
+@media (min-width: 48.00em){
+    header .nav_top a span{
+        display: inline;
+    }
+}
+
+@media (min-width: 62.750em){
+    header .hamburguesa{
+        display: none;
+    }
+
+    header .logo{
+        width:50%;
+    }
+
+    header nav ul{
+        width: 50%;
+        display: flex;
+        margin: -0.8em auto;
+        justify-content: end;
+    }
+
+    header nav ul li{
+        width: 100%;
+    }
+
+    header nav ul li a{
+        border-bottom: 0px;
+    }
+
+}
+
+
+/* ------HERO------ */
+.hero{
+    background-image: url(../images/fondo.jpg);
+    height: 35em;
+    background-size: cover;
+    background-position: center;
+    /*esto para hacer que se ocurezca la foto: se pone un fondo por detras y se multiplica con la foto*/
+    background-color: #777777;
+    background-blend-mode: multiply;   
+}
+
+/*Mejor hacerlo con paddings en lugar de flex*/
+.hero .container{
+    height: 100%; /*tambien se podria poner display:flex en el .hero para que se ajusre el .container al 100% de la altura del .hero. El resultado seria el mismo*/
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero h1{
+    font-size: 2.5em;
+    font-family: var(--fuenteSecundaria);
+    color: white;
+}
+
+.hero h2{
+    color: var(--color-principal);
+    font-size: 1.5em;
+    margin: 1em 0;
+}
+
+.hero p{
+    font-size: 1.15em;
+    color: white;
+}
+
+.boton{/*solo creo boton sin el .hero delante porque la voy a volver a usar*/
+    display: inline-block;
+    background-color: var(--color-principal);
+    padding: 1.15em;
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--color-principal);
+    margin: 1em 0;
+}
+
+.boton:hover{
+    background-color: transparent;
+    color: var(--color-principal);
+}
+
+.boton:hover i{
+    transform: translateX(5px);
+}
+
+/*Se pone en el i, sin el :hover para que lo haga de ida y de vuelta (al posicionarse y al soltar)*/
+.boton i{
+    transition: transform 1s;
+}
+
+.hero .social li{
+    /*se podrian alinear con flex tambien*/
+    display:inline-block;
+    font-size: 2em;
+    margin-right: 1em;
+}
+
+.hero .social a{
+    color: white;
+    text-decoration: none;
+}
+
+
+/* ------MAIN SECTION OURSERVICES------ */
+main section{
+    padding: 2.125em 0;
+}
+
+main section h2{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span{
+    color: var(--color-principal);
+}
+
+main section .underline{
+    position: relative;
+    width: 5em;
+    margin: 0 auto;
+    color: var(--color-principal);
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+
+main section .underline hr{
+    border-color: var(--color-principal);
+    position: absolute;
+    top: -0.126em;
+    width: 100%;
+}
+
+main section .underline span{
+    text-align: center;
+    display: block;
+}
+
+main section .row{
+    flex-wrap: wrap;
+    /*Para que las lineas no lleguen hasta el lateral entero, se ajusten al tamaño del contenedor*/
+    padding: 0 0.825em;
+}
+
+main section .row article{
+    width: 100%;
+    padding: 1.825em 0;
+    border-bottom: 1px solid #aaa;
+}
+
+main section article div i{
+    color: var(--color-principal);
+    font-size: 2em;
+    padding: 0.8rem;
+    border:2px solid var(--color-principal)
+}
+
+main section article .fa-truck{
+    transform: rotateY(180deg);
+}
+
+main section article h3{
+    font-weight: 700;
+    margin: 1em 0;
+}
+
+.enlace{
+    text-decoration: none;
+    color: var(--color-principal);
+    margin-top: 1em;
+    display: block;
+}
+
+@media (min-width:48.00em){
+    main section .row article{
+        width:50%;
+        padding: 1.825em 0.825em;
+        border-bottom: 0px;
+        border-left: 1px solid #aaa;
+        margin-bottom: 1em;
+    }
+
+    main section .row article:nth-child(3){
+        width: 100%;
+    }
+}
+
+@media (min-width:62.750em){
+    main section .row article{
+        width:33.33%;
+    }
+
+    main section .row article:nth-child(3){
+        width:33.33%;
+    }
+}
+
+
+/* ------MAIN SECTION ABOUT US------ */
+main section .row .columna{
+    border:0px;
+}
+
+main section .row .columna h4{
+    margin-bottom: 1em;
+    color: var(--color-principal);
+}
+
+main section .marco{
+    border: 3px solid var(--color-principal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+    /*width y margin para hacer que no se cree scroll horizontal en movil (por eso reducimos la imagen)*/
+    width: 85%;
+    margin: 0 auto;
+}
+
+main section .marco img{
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main section .columna:hover .marco, main section .columna:hover .marco img{
+    transform: rotateZ(0deg);
+}
+
+@media (min-width:48.00em){
+    main section .row .columna{
+        width: 50%;
+    }
+}
+
+
+/* ------FOOTER------ */
+footer{
+    background-color: var(--color-secundario);
+    padding: 1.825em 0;
+    text-align: center;
+}
+
+footer p, footer a{
+    color:white;
+}
+
+footer a:hover{
+    text-decoration: none;
+}
+
+@media (min-width: 48.00em){
+    footer{
+        text-align: left;
+    }
+}
+
+
