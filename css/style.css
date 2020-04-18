@@ -439,6 +439,11 @@ main section .row2 article p{
     padding: 0 0.60em;
 }
 
+@media (min-width: 48.00em){
+    main section .row2 article{
+        width: 33.33%;
+    }
+}
 
 /* ------FOOTER------ */
 footer{
