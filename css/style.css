@@ -277,7 +277,7 @@ main section .underline{
 main section .underline hr{
     border-color: var(--color-principal);
     position: absolute;
-    top: -0.126em;
+    top: -0.063em;
     width: 100%;
 }
 
@@ -378,6 +378,65 @@ main section .columna:hover .marco, main section .columna:hover .marco img{
     main section .row .columna{
         width: 50%;
     }
+}
+
+
+/* ------BLOG----- */
+main section .row2{
+    display: flex;
+    flex-wrap: wrap;
+    /*Para que las lineas no lleguen hasta el lateral entero, se ajusten al tamaño del contenedor*/
+    padding: 0 0.825em;
+}
+
+main section .row2 article{
+    width: 50%;
+    padding: 1.825em 0.825em;
+}
+
+main section .row2 article{
+    position: relative;
+}
+
+main section .row2 article .fecha{
+    background-color:rgba(255, 86, 19, 0.8);
+    width: 20%;
+    height: 12%;
+    text-align: center;
+    position: absolute;
+    left: 0.825em;
+    top: 1.825em;
+}
+
+main section .row2 article .fecha p{
+    color: white;
+    font-weight: 700;
+    padding-top: 10%;
+}
+
+main section .row2 article .enlace{
+    font-weight: bold;
+    padding: 0 0.60em;
+}
+
+main section .row2 article h3{
+    font-size: 1.25em;
+    margin: 1em 0;
+    padding: 0 0.60em;
+}
+
+main section .row2 article h4{
+    color: var(--color-principal);
+    font-weight: 700;
+    margin: 1em 0;
+    padding: 0 0.60em;
+}
+
+main section .row2 article p{
+    color: gray;
+    font-size: 0.825em;
+    font-family: var(--fuentePrincipal);
+    padding: 0 0.60em;
 }
 
 
