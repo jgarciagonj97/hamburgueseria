@@ -416,27 +416,27 @@ main section .row2 article .fecha p{
 
 main section .row2 article .enlace{
     font-weight: bold;
-    padding: 0 0.60em;
+    padding: 0 12px;
 }
 
 main section .row2 article h3{
     font-size: 1.25em;
     margin: 1em 0;
-    padding: 0 0.60em;
+    padding: 0 12px;
 }
 
 main section .row2 article h4{
     color: var(--color-principal);
     font-weight: 700;
     margin: 1em 0;
-    padding: 0 0.60em;
+    padding: 0 12px;
 }
 
 main section .row2 article p{
     color: gray;
     font-size: 0.825em;
     font-family: var(--fuentePrincipal);
-    padding: 0 0.60em;
+    padding: 0 12px;
 }
 
 @media (min-width: 48.00em){
