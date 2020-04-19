@@ -382,6 +382,13 @@ main section .columna:hover .marco, main section .columna:hover .marco img{
 
 
 /* ------BLOG----- */
+main section h1{
+    color: black;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
 main section .row2{
     display: flex;
     flex-wrap: wrap;
