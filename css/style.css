@@ -615,6 +615,7 @@ main section .grid .carta div i.flechita{
         margin-right: 6em;
     }
 
+
     main section .grid .carta div{
         margin-top: 0%;
         margin-bottom: 1em;
@@ -627,6 +628,11 @@ main section .grid .carta div i.flechita{
         grid-area: imagen;
     }
 
+    main section .grid .carta .imagen img{
+        width: 8em;
+        height: 6em;
+    }
+
     main section .grid .carta .texto{
         grid-area: texto;
         display:flex;
@@ -634,8 +640,8 @@ main section .grid .carta div i.flechita{
         margin-top: -1em;
     }
 
-    main section .grid .carte .texto p{
-        margin: 6em 0;
+    main section .grid .carta .texto p{
+        margin: 2em 0;
     }
 
     main section .grid .carta div i.flechita{
