@@ -494,6 +494,11 @@ main section .grid .comidas{
 }
 main section .comidas li{
     margin-top: 0.15em;
+    width:100%;
+}
+
+main section .comidas ul{
+    width:100%;
 }
 
 main section .comidas li:hover>a{
@@ -505,7 +510,7 @@ main section .comidas .activo:hover{
 }
 
 main section .comidas a{
-    display: block;
+    display: inline-block;
     border-radius: 0.2em;
     text-decoration: none;
     list-style: none;
@@ -516,6 +521,7 @@ main section .comidas a{
 
 main section .comidas .activo{
     background-color: var(--color-principal);
+    width:100%
 }
 
 main section .grid .descripcion{
@@ -550,7 +556,7 @@ main section .grid .carta{
     margin-bottom: -1em;
 }
 
-main section .grid .carta div{
+main section .grid .carta>div{
     margin-top: 2em;
     margin-left: 1em;
 }
@@ -592,6 +598,49 @@ main section .grid .carta div i.flechita{
     position: fixed; /*Si pongo :fixed no tiene en cuenta el position: relative de .carta; si quisiera hacer el cambio de eje aqui tendria que poner position:absolute;*/
     right: 0.5em;
     bottom: 0.5em;
+}
+
+@media (min-width: 62.750em){
+    main section .grid{
+        display: grid;
+        grid-template-areas: "comidas carta carta"
+                             "descripcion carta carta";
+    }
+
+    main section .grid .comidas{
+        margin-right: 6em;
+    }
+
+    main section .grid .descripcion{
+        margin-right: 6em;
+    }
+
+    main section .grid .carta div{
+        margin-top: 0%;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        display: grid;
+        grid-template-areas: "imagen texto";
+    }
+
+    main section .grid .carta .imagen{
+        grid-area: imagen;
+    }
+
+    main section .grid .carta .texto{
+        grid-area: texto;
+        display:flex;
+        flex-direction: column;
+        margin-top: -1em;
+    }
+
+    main section .grid .carte .texto p{
+        margin: 6em 0;
+    }
+
+    main section .grid .carta div i.flechita{
+        display: none;
+    }
 }
 
 /* ------FOOTER------ */
