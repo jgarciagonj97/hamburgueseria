@@ -452,6 +452,148 @@ main section .row2 article p{
     }
 }
 
+
+/* ------MENU----- */
+.container2{
+    width: 75%;
+    max-width: var(--ancho-maximo);
+    margin: 0 auto;
+    background-color: var(--color-secundario);
+}
+
+.container-fluid2{
+    width: 100%;
+    background-color: var(--color-secundario);
+}
+
+main section h1{
+    color: white;
+    font-family: var(--fuenteSecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h1 span{
+    color: var(--color-principal);
+}
+
+main section .underline hr{
+    border-color: var(--color-principal);
+    background-color: var(--color-principal);
+}
+
+main section .grid{
+    display: grid;
+    grid-template-areas: "comidas"
+                         "descripcion"
+                         "carta";
+}
+
+main section .grid .comidas{
+    grid-area: comidas;
+}
+main section .comidas li{
+    margin-top: 0.15em;
+}
+
+main section .comidas li:hover>a{
+    color: var(--color-principal);
+}
+
+main section .comidas .activo:hover{
+    color: white;
+}
+
+main section .comidas a{
+    display: block;
+    border-radius: 0.2em;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+    font-size: 0.825em;
+    padding: 0.5em 0.825em;
+}
+
+main section .comidas .activo{
+    background-color: var(--color-principal);
+}
+
+main section .grid .descripcion{
+    grid-area: descripcion;
+}
+main section .grid .descripcion{
+    margin-top: 1.6em;
+}
+
+main section .grid .descripcion h2{
+    font-family: var(--fuentePrincipal);
+    font-size: 0.825em;
+    font-weight: 700;
+    text-align: left;
+    color: white;
+}
+
+main section .grid .descripcion hr{
+    width: 2.5em;
+    margin-left: 0%;
+    border-color: var(--color-principal);
+}
+
+main section .grid .descripcion p{
+    font-size: 0.75em;
+    color: white;
+}
+
+main section .grid .carta{
+    grid-area: carta;
+    position: relative;
+    margin-bottom: -1em;
+}
+
+main section .grid .carta div{
+    margin-top: 2em;
+    margin-left: 1em;
+}
+
+main section .grid .carta div h3{
+    margin-top: 1em;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: white;
+}
+
+main section .grid .carta div h3 span{
+    color: var(--color-principal);
+    margin-left: 1em;
+}
+
+main section .grid .carta div p{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 0.7em;
+    color: white;
+}
+
+main section .grid .carta div a{
+    font-size: 0.7em;
+    text-decoration: none;
+    color: var(--color-principal);
+    font-weight: 700;
+}
+
+main section .grid .carta div i.flechita{
+    background-color: var(--color-principal);
+    text-align: center;
+    padding-top: 1em;
+    color: white;
+    width: 3em;
+    height: 3em;
+    border-radius: 2px;
+    position: fixed; /*Si pongo :fixed no tiene en cuenta el position: relative de .carta; si quisiera hacer el cambio de eje aqui tendria que poner position:absolute;*/
+    right: 0.5em;
+    bottom: 0.5em;
+}
+
 /* ------FOOTER------ */
 footer{
     background-color: var(--color-secundario);
