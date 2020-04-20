@@ -382,7 +382,7 @@ main section .columna:hover .marco, main section .columna:hover .marco img{
 
 
 /* ------BLOG----- */
-main section h1{
+main section .container h1{
     color: black;
     font-family: var(--fuenteSecundaria);
     font-size: 2em;
