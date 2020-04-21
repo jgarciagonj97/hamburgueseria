@@ -605,6 +605,7 @@ main section .grid .carta div i.flechita{
         display: grid;
         /*Para poner cuanto queremos que ocupe cada una de nuestras columnas: */
         grid-template-columns: 20% 80%;
+        grid-template-rows: 25% 75%;
         grid-gap: 5em;
         grid-template-areas: "comidas carta"
                              "descripcion carta";
